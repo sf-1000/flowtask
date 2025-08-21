@@ -15,9 +15,24 @@ function addTask(){
 
         taskinList.textContent = newTask;
 
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = "Delete";
+        deleteBtn.style.marginLeft = "15px";
+
+        deleteBtn.addEventListener('click', function() {
+            taskinList.remove();
+        });
+
+        taskinList.appendChild(deleteBtn);
+
         tasklist.appendChild(taskinList);
 
         usertask.value = '';
     }
 
+}
+
+function deleteTask(){
+
+    
 }
