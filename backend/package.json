@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/nbkurian11/flowtask#readme",
+  "bugs": {
+    "url": "https://github.com/nbkurian11/flowtask/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbkurian11/flowtask.git"
+  },
+  "license": "MIT",
+  "author": "Noel Kurian",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
