@@ -2,7 +2,7 @@ const addButton = document.getElementById('addbutton');
 const usertask = document.getElementById('taskid');
 const tasklist = document.getElementById('tasklist');
 
-// Add task functionality
+// Add tasks
 addButton.addEventListener('click', addTask);
 
 function addTask() {
@@ -38,10 +38,10 @@ breakBtn.addEventListener('click', startBreak);
 resetBtn.addEventListener('click', resetTimer);
 
 let timerRunning = false;
-let timeLeft = 1500; // 25 minutes
+let timeLeft = 1500; // 25 minutes in seconds
 let timer;
 
-// Format time MM:SS
+// Format time 
 function formatTime(totalSeconds) {
     const mins = Math.floor(totalSeconds / 60);
     const secs = totalSeconds % 60;
@@ -79,7 +79,7 @@ function startTimer() {
 function resetTimer() {
     clearInterval(timer);
     timerRunning = false;
-    timeLeft = 1500; // back to 25 min
+    timeLeft = 1500; // back to 25 mins
     updateDisplay();
     startBtn.textContent = "Start";
 }
