@@ -18,7 +18,7 @@ A productivity web app that helps users **manage tasks, stay focused with a Pomo
 ## 🛠 Tech Stack
 | Layer         | Technology                        | Purpose                              |
 |---------------|----------------------------------|--------------------------------------|
-| Frontend      | HTML, CSS, JS (React optional)   | UI for tasks, timer, charts          |
+| Frontend      | HTML, CSS, JS    | UI for tasks, timer, charts          |
 | Backend       | Node.js + Express                | API, authentication, business logic  |
 | Database      | PostgreSQL/MySQL                 | Store users, tasks, sessions         |
 | Auth          | JWT, bcrypt                      | Secure login/password hashing        |
