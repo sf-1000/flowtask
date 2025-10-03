@@ -1,0 +1,101 @@
+/* Reset / Base */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0077ff, #00c6ff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Auth Container */
+  .auth-container {
+    max-width: 400px;
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Branding */
+  .auth-container h1 {
+    margin-bottom: 20px;
+    color: #0077ff;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  
+  /* Tabs */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #f0f0f0;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+  
+  .tabs button:hover {
+    background: #ddd;
+  }
+  
+  /* Forms */
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .auth-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border 0.3s;
+  }
+  
+  .auth-form input:focus {
+    border-color: #0077ff;
+  }
+  
+  /* Buttons */
+  .auth-form button {
+    background: #0077ff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  
+  .auth-form button:hover {
+    background: #005fcc;
+  }
+  
+  /* Hide/Show */
+  .hidden {
+    display: none;
+  }
+  
+  /* Small animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
