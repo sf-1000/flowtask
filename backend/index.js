@@ -8,18 +8,7 @@ const { v4: uuidv4 } = require("uuid");
 app.use(bodyparser.json());
 
 
-const todos = [
-    {
-        id: 1,
-        desc: "Finish Assignment 1",
-        completed: false
-    },
-    {
-        id: 2,
-        desc: "Go to doctor's appointment",
-        completed: false
-    }
-]
+const todos = []
 
 //GET, POST, PUT, DELETE
 
@@ -38,20 +27,48 @@ app.get("/todos/:id", (req, res) => {
 });
 
 app.post("/todos", (req, res) => {
-    let body = req.body;
-    console.log(body);
-    todos.push({id: uuid.v4(), ...body});
-    res.json(todos);
+    const body = req.body;
+
+    if (!body.desc){
+        return res.status(400).json({message: "Description is required"});
+    }
+
+    const newTodo = {
+        id: uuidv4(),
+        completed: false,
+        ...body
+    };
+
+    todos.push(newTodo);
+    res.status(201).json(newTodo);
+
 }) 
 
 app.put("/todos/:id", (req, res) => {
-    res.json([])
+    const id = req.params.id;
+    const body = req.body
+
+
+    let todo = todos.find((todo) => todo.id == id);
+    if(todo){
+        Object.assign(todo, body);
+        res.json(todo);
+    } else {
+        res.status(404).json({message: "Todo not found"});
+    }
 })
 
 app.delete("/todos/:id", (req, res) => {
-    res.json([])
-})
+    const id = req.params.id;
+    const index = todos.findIndex((t) => t.id == id);
 
+    if (index !== -1) {
+        const deletedTodo = todos.splice(index, 1);
+        res.json(deleted[0]);
+    }else {
+        res.status(404).json({message: "Todo not found"});
+    }
+})
 
 
 app.listen(port, () => {
